@@ -1,0 +1,113 @@
+
+    *{
+        padding:0px;
+        margin:0px;
+
+        /* overflow-x: hidden; */
+       
+    }
+    
+    /* this removed white space on right side */
+    
+    body,html{  
+        overflow-x: hidden;
+        background-color:aliceblue
+    }
+   
+    a{
+        text-decoration:none;
+ 
+        color:white;
+        padding-left: 20px;
+
+    }
+   
+    #nav_div,#links_div{
+
+        
+
+        display:flex;
+        background-color:grey;
+        /* text-align: center; */
+        align-items: center;
+        padding:10px;
+        /* width:20px; */
+        height:30px;
+        color: rgb(231, 208, 208);
+
+        
+    }
+    #nav_div{
+        position:fixed;
+        z-index:2;
+      width:100%;
+      color:rgb(248, 245, 239)
+    /* padding-right: 20px; */
+    
+    }
+    .nav_a :hover{
+        color:rgb(223, 207, 207);
+   
+
+    }
+    
+    #hamburger{
+
+        position:relative;
+        left:41%;
+        top:-19px;
+        visibility: hidden;
+    
+    }
+  
+#links_div{
+    /* margin-right:30px; */
+    padding-right: 30px;
+    margin-left: auto;
+}
+
+#intro{
+    /* background:url("https://images.unsplash.com/photo-1562813733-b31f71025d54?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"); */
+    background:url("./assets/coder.jfif");
+    /* background-repeat:repeat-y; */
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    background-color:blue;
+    height:900px;
+    /* text-align: right; */
+    
+    align-items: flex-end;
+
+    justify-content: center;
+
+    color:white;
+ 
+
+
+}
+#ninja_pic{
+    position: relative;
+    right:2%;
+}
+#user_pic{
+    border-radius: 50%;
+    position: relative;
+    height:300px;
+    right:6%;
+   
+}
+#intro_heading{
+    /* padding:45px; */
+    position: relative;
+    top:30px;
+    right:8%;
+    /* width:380px; */
+    text-align: center;
+}
+#intro_heading h2{
+    padding-bottom: 10px;
+    
+}
+
+

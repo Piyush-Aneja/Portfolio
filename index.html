@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="./navIntro.css">
+<link rel="stylesheet" href="./projectAboutContact.css">
+<link rel="stylesheet" href="./bottomAndmedia.css">
+</head>
+
+<body>
+
+    <div id="nav_div">
+        <h2>Piyush Aneja</h2>
+        <img  src="./assets/hamburger_btn.png" onclick="hambtn_clicked()" alt="" id="hamburger"  height="30px" >
+        <div id="links_div" onclick="sectionclicked()">
+            <ul class="nav_a" ><a href="#project_sec" >Projects</a> </ul>
+            <ul class="nav_a" ><a href="#about_sec">About</a> </ul>
+            <!-- <ul class="nav_a" ><a href="">More</a> </ul> -->
+            <ul class="nav_a" ><a href="#contact_sec">Contact</a> </ul>
+            <ul class="nav_a"><a href="#" style="pointer-events: none;" target="_blank">Resume</a></ul> 
+           
+        </div>
+    </div>
+
+    <div id="intro">
+        <!-- <img id="user_pic" src="https://avatars.githubusercontent.com/u/58240852?s=400&u=468597f807d91a9a4d508a3b6d26e5828810d49f&v=4" alt="" srcset=""> -->
+        <!-- <img id="user_pic" src="./assets/userpic_edit.png" alt="user pic" srcset=""> -->
+        <img src="https://avatars.githubusercontent.com/u/58240852?s=400&u=468597f807d91a9a4d508a3b6d26e5828810d49f&v=4" alt="" id="user_pic">
+        <!-- <img id="ninja_pic" src="./assets/ninja-coder.png" alt="" srcset=""> -->
+        <div id="intro_heading">
+            <h2>
+                I am Piyush Aneja
+           </h2>
+   
+           <h3 id="intro_sub_head">
+               A computer science student 
+           </h3>
+        </div>
+       
+    </div>
+
+    <h1 id="proj_head">Projects</h1>
+    
+    <section id="project_sec">
+        
+        <div class="project"><h2>Attendance management</h2>
+            <img src="./assets/face-detect.jpg" alt="face recogniton img" srcset="">
+            <p class="project_desc">Attendance is taken and stored in excel sheet</p>
+            <button class="source_code_btn" onclick="window.open('https://github.com/Piyush-Aneja/Attendance-Management-System','_blanck')">Source Code</button>
+        </div>
+
+        <div class="project"><h2>House Price prediction </h2>
+        <img src="./assets/prediction.jfif"  alt="" srcset="">
+        <p class="project_desc" >Predicting house price using supervised machine learning</p>
+        <button class="source_code_btn" onclick="window.open('https://github.com/Piyush-Aneja/Attendance-Management-System','_blanck')">Source Code</button>
+         </div>
+
+        <div class="project">
+            <h2>Spam classifier</h2>
+            <img src="./assets/spamdetector.jfif" alt="" srcset="">
+            <p class="project_desc" >Spam classfier using nlp</p>
+            <button class="source_code_btn" onclick="window.open('https://github.com/Piyush-Aneja/Attendance-Management-System','_blanck')">Source Code</button>
+            
+        </div>
+
+    </section>
+
+    <h1 id="about_head">About Me</h1>
+
+    <section id="about_sec">
+        
+        <div class="about_me">
+       <p>
+        I have completed my 10th and 12th from St thomas college ICSE/ISC Board in the year 2017 and 2019 respectively. </p>   
+        </div>
+
+        <!-- <img src="./assets/southeast_arrow.png" alt="" id="rightdown_arrow"> -->
+
+        <div class="about_me">
+          <p>I am currently pursuing my bachelor's of engineering in computer science from Nitte Meenakshi Institute of Technology,Bangalore. </p>  
+        </div>
+        <!-- <img src="./assets/southeast_arrow.png" alt="" id="leftdown_arrow"> -->
+        <div class="about_me">
+          <p> Due to keen interest in technology I am learning Deep learning. I am also working on my web development skills.</p> 
+        </div>
+
+    </section>
+
+    <h1  id="contact_head"> Connect Me </h1>
+    <section id="contact_sec">
+
+        <ul>
+            <img  class="contactLogo" src="./assets/GithubLogo.png" alt="" srcset="">
+            <li class="links"  ><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <img class="contactLogo" src="./assets/linkedIn.png" alt="" srcset="">
+            <li class="links" ><a href="https://www.linkedin.com/in/piyush-aneja-a29a221a9/" target="_blank">LinkedIn</a></li>
+            <img  class="contactLogo" src="./assets/gmailLogo.png" alt="" srcset="">
+            <li class="links"><a href="mailto:piyushaneja009@gmail.com">Gmail</a></li>
+
+    </section>
+
+    <footer>
+        <div>
+            Thank You
+
+        </div> 
+    </footer>
+
+</body>
+</html>
+<script>
+    console.log("hey");
+    function sourcecode(id)
+    {
+        console.log(id);
+       
+    }
+    var aboutsec=$("#about_sec").offset();
+    console.log(aboutsec);
+    
+
+    $(document).ready(function()
+    {
+        $(window).scroll(function(){
+            var scrolled=$(document).scrollTop();
+            console.log("wd"+window.screen.width);
+            if(scrolled>(aboutsec.top-500) && window.screen.width>=800)
+            {
+                // console.log("reached about sec");
+                let elements=document.getElementsByClassName("about_me");
+                // console.log(elements.length);
+                for(let i=0;i<elements.length;i++)
+                    {
+                        elements[i].classList.add("about_animation");
+                        // console.log (elements[i]);
+                    
+                    }
+                    console.log("animation class added");
+            }
+            else{
+                //mobile user
+                if( window.screen.width<800)
+                {
+                    //(css method)
+//                     var sheet = document.createElement('style')
+//                     sheet.innerHTML = ".about_me {visibility: visible;}";
+//                     document.body.appendChild(sheet);
+                
+                    // (jqery method)
+
+                    $('.about_me').css("visibility","visible");
+
+                    console.log("visibility added");
+                } 
+
+            }
+           
+            // console.log(scrolled);
+        })
+    })
+
+    $(window).resize(function() {
+        // console.log("outside in "+window.innerWidth);
+        if(window.innerWidth<800)
+        {
+            console.log("came in "+window.innerWidth);
+        let elements=document.getElementsByClassName("about_me");
+                // console.log(elements.length);
+                for(let i=0;i<elements.length;i++)
+                    {
+                        elements[i].classList.remove("about_animation");
+                        // console.log (elements[i]);
+                    
+                    }
+                    console.log("animation class removed");
+        }
+    });
+    let i=1
+    function hambtn_clicked(){
+    
+        // console.log("button clicked");
+        if(i%2!=0)
+        {
+        document.getElementById("links_div").style.visibility="visible";
+        document.getElementById("intro").style.height="800px";
+        
+    }
+        else
+        {
+            document.getElementById("links_div").style.visibility="hidden";
+            document.getElementById("intro").style.height="600px";
+        }
+        i++;
+        // console.log("changed");
+        
+ 
+    };
+    function sectionclicked(){
+        if(window.screen.width<=400){
+            console.log("mobile phone section clicked");
+            hambtn_clicked();
+
+        }
+    }
+</script>
